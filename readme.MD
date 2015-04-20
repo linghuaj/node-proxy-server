@@ -24,6 +24,7 @@ Time spent: [1hr]
 ##to reproduce the gif, plz try any of the following: 
 
 ```javascript
+//do a npm install first
 
 npm start
 curl -v http://127.0.0.1:8001 -H 'x-cat:niuniu'
