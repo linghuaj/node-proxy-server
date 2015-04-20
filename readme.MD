@@ -17,7 +17,30 @@ Completed:
 * [todo] Optional: Supports HTTPS
 * [todo] Optional: `-h` argument prints CLI API
 
-Recording of achievements as gif:
+##Recording of achievements as gif:
 
 [![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/record.gif)](#features)
+
+##to reproduce the gif, plz try any of the following: 
+
+npm start
+curl -v http://127.0.0.1:8001 -H 'x-cat:niuniu'
+
+
+nodemon -x babel-node index --url http://google.com
+curl -v http://127.0.0.1:8001 -H 'x-cat:niuniu'
+
+
+nodemon -x babel-node index --host google.com --port 80
+curl -v http://127.0.0.1:8001 -H 'x-cat:niuniu'
+
+
+babel-node index
+curl -v http://127.0.0.1:8001 -H 'x-cat:niuniu'
+curl -v http://127.0.0.1:8001 -H 'x-destination-url:http://google.com'
+
+
+babel-node index --mylog=/tmp/codepath-proxy.log
+
+curl -v http://127.0.0.1:8001 -H 'x-destination-url:http://google.com'
 
