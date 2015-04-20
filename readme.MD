@@ -20,4 +20,4 @@ Completed:
 
 
 Recording of achievements as gif:
-record.gif
+![alt tag] https://github.com/vanessachem/codpath-proxy-server/blob/master/record.gif
