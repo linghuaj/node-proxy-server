@@ -17,7 +17,7 @@ Completed:
 * [todo] Optional: Supports HTTPS
 * [todo] Optional: `-h` argument prints CLI API
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)
-
 Recording of achievements as gif:
-![alt tag] https://github.com/vanessachem/codpath-proxy-server/blob/master/record.gif
+
+[![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/record.gif)](#features)
+
