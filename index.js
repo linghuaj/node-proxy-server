@@ -6,12 +6,11 @@ let request = require('request');
 let yargs = require('yargs'); //allow pass args from commandline
 let through = require('through');
 
-
 let argv = yargs.default('host', 'localhost').argv; //if there is not host pass from cli, use localhost as default value
 let port = argv.port || 80;
 //bode index --host www.google.com --port 80
-let destUrl = argv.url || argv.host === "localhost"? "http://localhost:8000" : "http://" + argv.host + ":" + port;
-let logstream = argv.logfile? fs.createWriteStream(argv.logfile) : process.stdout;
+let destUrl = argv.url || (argv.host === "localhost"? "http://localhost:8000" : "http://" + argv.host + ":" + port);
+let logstream = argv.mylog? fs.createWriteStream(argv.mylog) : process.stdout;
 
 //set up the origin server
 http.createServer((req, res) => {
@@ -24,7 +23,7 @@ http.createServer((req, res) => {
    req.pipe(res);
 }).listen(8000);
 
-logstream.write("listen to localhost:8000");
+logstream.write("listen to localhost:8000 \n");
 
 //set up the proxy server
 //curl -v http://127.0.0.1:8001 -d "niuniu" -H "x-asdf: foo"
@@ -46,4 +45,4 @@ http.createServer((req, res) =>{
 	through(req, logstream, {autoDestroy: false});
 }).listen(8001);
 
-logstream.write("listen to localhost:8001");
+logstream.write("listen to localhost:8001 \n");
