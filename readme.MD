@@ -4,7 +4,7 @@ This is a Proxy Server for Node.js submitted as the [pre-work](http://courses.co
 
 Time spent: [1hr]
 
-Completed:
+##Completed:
 
 * [done] Required: Requests to port `8000` are echoed back with the same HTTP headers and body
 * [done] Required: Requests/reponses are proxied to/from the destination server
@@ -22,6 +22,8 @@ Completed:
 [![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/record.gif)](#features)
 
 ##to reproduce the gif, plz try any of the following: 
+
+```javascript
 
 npm start
 curl -v http://127.0.0.1:8001 -H 'x-cat:niuniu'
@@ -43,4 +45,4 @@ curl -v http://127.0.0.1:8001 -H 'x-destination-url:http://google.com'
 babel-node index --mylog=/tmp/codepath-proxy.log
 
 curl -v http://127.0.0.1:8001 -H 'x-destination-url:http://google.com'
-
+```
