@@ -14,7 +14,7 @@ let logstream = argv.mylog ? fs.createWriteStream(argv.mylog) : process.stdout;
 let processInput =  process.stdin.read();
 
 let ChildProcess = require('./childProcess');
-
+let loggerLevelSetting = argv.loglevel || 'debug';
 if (argv.exec){
    ChildProcess.spawn(argv);
 }
