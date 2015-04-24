@@ -7,14 +7,14 @@ let logLevelLookup = {
 }
 
 class Logger {
-	/**
-	 * class logger
-	 * log input into logstream based on global log level.
-	 * 
-	 * @param  {[type]} loglevel  [description]
-	 * @param  {[type]} logstream [description]
-	 * @return {[type]}           [description]
-	 */
+    /**
+     * class logger
+     * log input into logstream based on global log level.
+     *
+     * @param  {[type]} loglevel  [description]
+     * @param  {[type]} logstream [description]
+     * @return {[type]}           [description]
+     */
     constructor(loglevel, logstream) {
         this.logLevel = loglevel || 'debug';
         this.logstream = logstream || process.stdout;
@@ -28,11 +28,11 @@ class Logger {
 
         if (typeof(input) === 'string') {
             this.logstream.write('\n' + logStr + '[string] ' + input + '\n');
-            return 
+            return
         }
         //todo what is the best way for stream;
         if (typeof(input) === 'object' && input.hasOwnProperty('readable')) {
-            this.logstream.write('\n' +logStr + '[stream]: '+ '\n');
+            this.logstream.write('\n' + logStr + '[stream]: ' + '\n');
             // if we use pipe, logstream will end when the res is end.
             input.pipe(this.logstream);
 

@@ -2,11 +2,11 @@ let spawn = require('child_process').spawn;
 let ChildProcess = {};
 /**
  * HTTP proxying is nice, but let's make this a multi-purpose proxy process.
- * Allow a process name to be specified in the --exec argument. 
+ * Allow a process name to be specified in the --exec argument.
  * You'll want to use child_process.spawn to pipe stdin/stdout/stderr between the process and the child process.
  *
  * cat index.js | babel-node index.js --exec grep require
- * 
+ *
  * @param  {[type]} argv [description]
  * @return {[type]}      [description]
  */

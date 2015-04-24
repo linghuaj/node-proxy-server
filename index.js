@@ -21,8 +21,8 @@ let myLog = new Logger(logLevelSetting, logstream);
 let ChildProcess = require('./childProcess');
 
 
-if (argv.exec){
-   ChildProcess.spawn(argv);
+if (argv.exec) {
+    ChildProcess.spawn(argv);
 }
 
 
@@ -47,7 +47,7 @@ http.createServer((req, res) => {
             headers: req.headers, //forward the header to dest server
             url: req.headers['x-destination-url'] || destUrl
         }
-    //make sure path and query param are forwarded.
+     //make sure path and query param are forwarded.
     options.url += req.url;
     //request(options) is a readable and writeable stream
     //then pipe the stream to response 
@@ -59,7 +59,7 @@ http.createServer((req, res) => {
     // });
 
     downStream.pipe(res);
-    
+
     myLog.debug("><downstream111");
     myLog.info(downStream);
 
