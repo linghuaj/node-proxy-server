@@ -27,11 +27,12 @@ class Logger {
         var logStr = "Logger[" + level + "]: ";
 
         if (typeof(input) === 'string') {
-            return this.logstream.write(logStr + '[string] ' + input);
+            this.logstream.write('\n' + logStr + '[string] ' + input + '\n');
+            return 
         }
         //todo what is the best way for stream;
         if (typeof(input) === 'object' && input.hasOwnProperty('readable')) {
-            this.logstream.write(logStr + '[stream]: ');
+            this.logstream.write('\n' +logStr + '[stream]: '+ '\n');
             // if we use pipe, logstream will end when the res is end.
             input.pipe(this.logstream);
 
