@@ -47,3 +47,11 @@ babel-node index --mylog=/tmp/codepath-proxy.log
 
 curl -v http://127.0.0.1:8001 -H 'x-destination-url:http://google.com'
 ```
+
+##child process:
+
+[![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/assets/childProcess.gif)](#features)
+
+##log level:
+[![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/assets/loglevel.gif)](#features)
+
