@@ -13,13 +13,13 @@ Time spent: [1hr]
 * [done] Required: Client requests and respones are printed to stdout
 * [done] Required: The `--logfile` argument outputs all logs to the file specified instead of stdout
 * [done] Optional: The `--exec` argument proxies stdin/stdout to/from the destination program
-* [todo] Optional: The `--loglevel` argument sets the logging chattiness
+* [done] Optional: The `--loglevel` argument sets the logging chattiness
 * [todo] Optional: Supports HTTPS
 * [todo] Optional: `-h` argument prints CLI API
 
 ##Recording of achievements as gif:
 
-[![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/record.gif)](#features)
+[![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/assets/record.gif)](#features)
 
 ##to reproduce the gif, plz try any of the following: 
 
