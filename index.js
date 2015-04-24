@@ -38,7 +38,7 @@ http.createServer((req, res) => {
 
 }).listen(8000);
 
-logstream.write("listen to localhost:8000 \n");
+myLog.alert("listen to localhost:8000 \n");
 
 //set up the proxy server
 //curl -v http://127.0.0.1:8001 -d "niuniu" -H "x-asdf: foo"
@@ -66,4 +66,4 @@ http.createServer((req, res) => {
 
 }).listen(8001);
 
-logstream.write("listen to localhost:8001 \n");
+myLog.alert("listen to localhost:8001 \n");
