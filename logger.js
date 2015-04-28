@@ -33,16 +33,11 @@ class Logger {
         //todo what is the best way for stream;
         if (typeof(input) === 'object' && input.hasOwnProperty('readable')) {
             this.logstream.write(logStr + '[stream]: ' + '\n');
-            // if we use pipe, logstream will end when the res is end.
-            input.pipe(this.logstream);
-
-            //  using through will keep the file from ending.  this only need when log into a file
-            // through(input, logstream, {
-            //     autoDestroy: false
-            // });
-
+            // do not end the file after one response end. 
+            // end:false is needed for writing to a file
+            // if use console.log it is not needed
+            input.pipe(this.logstream,{end: false});
             return;
-
         }
 
         return this.logstream.write(logStr + '[object] ' + JSON.stringify(input));
