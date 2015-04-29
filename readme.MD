@@ -17,6 +17,12 @@ Time spent: [1hr]
 * [todo] Optional: Supports HTTPS
 * [todo] Optional: `-h` argument prints CLI API
 
+
+For help. run
+```javascript
+babel-node index.js  -h
+```
+
 ##Recording of achievements as gif:
 
 [![solarized dualmode](https://github.com/vanessachem/codpath-proxy-server/blob/master/assets/record.gif)](#features)
