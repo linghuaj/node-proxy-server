@@ -14,11 +14,11 @@ let destUrl = argv.url || (argv.host === "localhost" ? "http://localhost:8000" :
 //logger
 let logstream = argv.mylog ? fs.createWriteStream(argv.mylog) : process.stdout;
 let logLevelSetting = argv.loglevel || 'debug';
-let Logger = require('./logger');
+let Logger = require('./lib/logger');
 let myLog = new Logger(logLevelSetting, logstream);
 
 //child process
-let ChildProcess = require('./childProcess');
+let ChildProcess = require('./lib/childProcess');
 
 
 if (argv.exec) {
