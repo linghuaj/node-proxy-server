@@ -31,9 +31,6 @@ http.createServer((req, res) => {
     for (let header in req.headers) {
         res.setHeader(header, req.headers[header]);
     }
-    through(req, logstream, {
-        autoDestroy: false
-    });
     req.pipe(res);
 
 }).listen(8000);
@@ -47,22 +44,21 @@ http.createServer((req, res) => {
             headers: req.headers, //forward the header to dest server
             url: req.headers['x-destination-url'] || destUrl
         }
-     //make sure path and query param are forwarded.
+        //make sure path and query param are forwarded.
     options.url += req.url;
     //request(options) is a readable and writeable stream
     //then pipe the stream to response 
     var downStream = req.pipe(request(options));
     myLog.debug("><request111");
     myLog.info(req);
+    //replaced with logger
     // through(downStream, logstream, {
     //        autoDestroy: false
     // });
-
     downStream.pipe(res);
 
     myLog.debug("><downstream111");
     myLog.info(downStream);
-
 
 }).listen(8001);
 
